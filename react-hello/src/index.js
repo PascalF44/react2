@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-function HelloWorld() {
-  return <div>Hello</div>;
+function Tweet() {
+  return <div className="tweet">Hello</div>;
 }
 
-ReactDOM.render(<HelloWorld />, document.querySelector("#root"));
+ReactDOM.render(<Tweet />, document.querySelector("#root"));
