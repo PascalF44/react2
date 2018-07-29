@@ -36,4 +36,5 @@ function NameWithHandle() {
 function Message() {
   return <div className="message">texte du message à afficher</div>;
 }
+
 ReactDOM.render(<Tweet />, document.querySelector("#root"));
