@@ -6,7 +6,10 @@ function Tweet() {
   return (
     <div className="tweet">
       <Avatar />
-      Hello
+      <div className="content">
+        <NameWithHandle />
+        <Message />
+      </div>
     </div>
   );
 }
@@ -21,4 +24,16 @@ function Avatar() {
   );
 }
 
+function NameWithHandle() {
+  return (
+    <span className="name-with-handle">
+      <span className="name">Pascal</span>
+      <span className="handle">@pfi</span>
+    </span>
+  );
+}
+
+function Message() {
+  return <div className="message">texte du message à afficher</div>;
+}
 ReactDOM.render(<Tweet />, document.querySelector("#root"));
