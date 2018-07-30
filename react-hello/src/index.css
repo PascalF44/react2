@@ -12,13 +12,12 @@
 .avatar{
   width: 48px;
   height: 48px;
-  border-radius: 3px;
+  border-radius: 5px;
   margin-right: 10px;
 }
 
 .name{
   font-weight: bold;
-  font-size: 16px;
   margin-bottom: 0.5em;
   margin-right: 0.3em;
 }
@@ -30,6 +29,28 @@
 
 .message{
   font-style: italic
+}
+
+.time{
+  font-size: 12px;
+  padding-left: 0.3em;
+  color: #8899a6;
+}
+
+.time::before{
+  content: "\00b7";
+  padding-right: 0.3em;
+}
+
+.buttons{
+  /*margin-top: 10px;
+  margin-left: 2px;*/
+  font-size: 1.4em;
+  color: #aab8c2;
+}
+
+.buttons i{
+  width: 80px;
 }
 
 .resultat{
