@@ -10,12 +10,12 @@ function Tweet() {
         <NameWithHandle />
         <Time />
         <Message />
-      </div>
-      <div className="buttons">
-        <ReplyButton />
-        <RetweetButton />
-        <LikeButton />
-        <MoreOptionsButton />
+        <div className="buttons">
+          <ReplyButton />
+          <RetweetButton />
+          <LikeButton />
+          <MoreOptionsButton />
+        </div>
       </div>
     </div>
   );
