@@ -5,6 +5,30 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - run: npm install
-      - run: npm build
-      - run: npm test
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+     - run: 
+          name: installation
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+
+  test:
+    steps:
+      - run: 
+          name: exécution des tests
+          command: npm test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
